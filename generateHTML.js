@@ -17,6 +17,7 @@ const colors = {
         headerColor: "white",
         photoBorderColor: "#FEE24C"
     },
+
     red: {
         wrapperBackground: "#DE9967",
         headerBackground: "#870603",
@@ -170,5 +171,55 @@ function generateHTML(data) {
               zoom: .75; 
             } 
            }
-        </style>`
+        </style>
+
+        <body>
+
+        <div class="row wrapper">
+            <div class="photo-header">
+                <img src="" alt="" class="img">
+                <h1>HI</h1>
+                <h2>My name is Zeliha Gencel</h2>
+                <h4>Currently student @ Northwestern Bootcamp</h4>
+    
+                <div class="links-nav">
+                    <a class="nav-link" id="mylink" href="http://www.google.com">linky</a>
+                    <a class="nav-link" id="mylink" href="http://www.imdb.com">linky2</a>
+                    <a class="nav-link" id="mylink" href="http://www.eksisozluk.com">linky3</a>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="row container col">
+            <h2 class="main">I build things and teach people to code.</h2>
+        </div>
+    
+        <div class="row main container">
+            <div class="card col">
+                <h3>Public Repositories</h3>
+            </div>
+    
+            <div class="card col">
+                <h3>Followers</h3>
+            </div>
+    
+            <div class="card col">
+                <h3>GitHub Stars</h3>
+            </div>
+    
+            <div class="card col">
+                <h3>Following</h3>
+            </div>
+        </div>
+    
+        </div>
+        <div class="row wrapper">
+    
+        </div>
+        </div>
+    
+    
+    </body>`
 }
+exports.generateHTML = generateHTML;
