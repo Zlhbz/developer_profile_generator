@@ -12,7 +12,7 @@ const questions = inquirer
         name: "color"
     }
     ]).then(function (data) {
-        console.log("data mi data " + data);
+        // console.log("data mi data " + data);
         console.log(data.color);
 
         api.getNumbOfRepo().then(function (response) {
@@ -74,6 +74,4 @@ const questions = inquirer
 
     })
 
-
-/////////////////////////////////////////////////////////
 
