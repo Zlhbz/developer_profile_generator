@@ -1,3 +1,5 @@
+const api = require("./api.js");
+
 const colors = {
     green: {
         wrapperBackground: "#E6E1C3",
@@ -27,6 +29,9 @@ const colors = {
 };
 
 function generateHTML(data) {
+    // console.log("data mi data " + data);
+    // console.log("working???? " + data.city);
+
     return `<!DOCTYPE html>
   <html lang="en">
      <head>
@@ -177,49 +182,49 @@ function generateHTML(data) {
 
         <div class="row wrapper">
             <div class="photo-header">
-                <img src="" alt="" class="img">
+                <img src="${data.pic}" alt="" class="img">
                 <h1>HI</h1>
-                <h2>My name is Zeliha Gencel</h2>
+                <h2>My name is ${data.name}</h2>
                 <h4>Currently student @ Northwestern Bootcamp</h4>
     
                 <div class="links-nav">
-                    <a class="nav-link" id="mylink" href="http://www.google.com">linky</a>
-                    <a class="nav-link" id="mylink" href="http://www.imdb.com">linky2</a>
-                    <a class="nav-link" id="mylink" href="http://www.eksisozluk.com">linky3</a>
+                    <a class="nav-link" id="mylink" href="https://www.google.com/maps/place/${data.city}/">${data.city}</a>
+                    <a class="nav-link" id="mylink" href="${data.URL}">GitHub</a>
                 </div>
             </div>
         </div>
     
     
         <div class="row container col">
-            <h2 class="main">I build things and teach people to code.</h2>
+            <h2 class="main">I learn coding.</h2>
         </div>
     
         <div class="row main container">
             <div class="card col">
-                <h3>Public Repositories</h3>
+                <h3>Public Repositories ${data.repo}</h3>
             </div>
     
             <div class="card col">
-                <h3>Followers</h3>
+                <h3>Followers ${data.followers}</h3>
             </div>
     
             <div class="card col">
-                <h3>GitHub Stars</h3>
+                <h3>GitHub Stars ${data.stars}</h3>
             </div>
     
             <div class="card col">
-                <h3>Following</h3>
+                <h3>Following ${data.followings}</h3>
             </div>
         </div>
     
-        </div>
+       
         <div class="row wrapper">
     
-        </div>
+       
         </div>
     
     
-    </body>`
+    </body>
+    </html>`
 }
 exports.generateHTML = generateHTML;
